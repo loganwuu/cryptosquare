@@ -12,6 +12,7 @@ The spaces and punctuation are removed from the English text and the characters 
 * Spaces are removed.
 * Punctuations are removed.
 * Entire string is down-cased.
+* Get length of string.
 * Outputs the characters into a square or rectangle.
 * If the message is a length that creates a perfect square (e.g. 4, 9, 16, 25, 36, etc), use that number of columns.
 * If the message doesn't fit neatly into a square, choose the number of columns that corresponds to the smallest square that is larger than the number of characters in the message.

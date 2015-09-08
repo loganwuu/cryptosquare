@@ -1,16 +1,29 @@
-describe('factorial', function() {
-    // If the number is less than 0, reject it.
-    it("is invalid number if the number entered is less than 0", function() {
-        expect(factorial(-1)).to.equal("error");
+describe('formatString', function() {
+    it("removes spaces in the string", function() {
+        expect(formatString('Have a nice day!')).to.eql(["h", "a", "v", "e", "a", "n", "i", "c", "e", "d", "a", "y"]);
     });
 
-    // If the number is 0, its factorial is 1.
-    it("is 1 if the number entered is 0", function() {
-        expect(factorial(0)).to.equal(1);
+    it("removes punctuation in the string", function() {
+        expect(formatString('Have a nice day!')).to.eql(["h", "a", "v", "e", "a", "n", "i", "c", "e", "d", "a", "y"]);
     });
 
-    // Otherwise, call this recursive procedure again.
-    it("multiplies a number by all of the positive integers less than that number", function() {
-        expect(factorial(5)).to.equal(120);
+    it("downcases the string", function() {
+        expect(formatString('Have a Nice Day!')).to.eql(["h", "a", "v", "e", "a", "n", "i", "c", "e", "d", "a", "y"]);
+    });
+
+    it("changes the string into array", function() {
+        expect(formatString('Have a nice day')).to.eql(["h", "a", "v", "e", "a", "n", "i", "c", "e", "d", "a", "y"]);
+    });
+});
+
+describe('getLength', function() {
+    it("gets length of the string", function() {
+        expect(getLength('Have a nice day!')).to.equal(13);
+    });
+});
+
+describe('getSquare', function() {
+    it("gets size of square of the characters in the string", function() {
+        expect(getSquare('haveaniceday')).to.equal(4);
     });
 });
